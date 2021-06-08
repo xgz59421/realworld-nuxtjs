@@ -46,7 +46,7 @@ jobs:
 
     # 部署到服务器
     # wget https://github.com/lipengzhou/realworld-nuxtjs/releases/latest/download/release.tgz -O release.tgz
-
+    # npm install --production
     - name: Deploy
       uses: appleboy/ssh-action@master
       with:
@@ -58,5 +58,5 @@ jobs:
           cd /root/realworld-nuxtjs
           wget https://github.com/xgz59421/realworld-nuxtjs/releases/latest/download/release.tgz -O release.tgz
           tar zxvf release.tgz
-          npm install --production
+          npm install 
           pm2 reload pm2.config.json
